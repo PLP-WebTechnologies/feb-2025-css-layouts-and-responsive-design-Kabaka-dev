@@ -1,0 +1,67 @@
+/* styles.css */
+/* Base Styles (Mobile-First) */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Flexbox Navbar */
+  .navbar {
+    display: flex;
+    flex-direction: column; /* Stack links vertically on mobile */
+    background: #333;
+    padding: 1rem;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    text-align: center;
+  }
+  
+  /* Grid Layout for Main Content */
+  .container {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .sidebar {
+    background: #f4f4f4;
+    padding: 1rem;
+  }
+  
+  /* Footer */
+  .footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  /* Media Queries */
+  /* Tablet (600px+) */
+  @media (min-width: 600px) {
+    .navbar {
+      flex-direction: row; /* Horizontal nav */
+      justify-content: space-around;
+    }
+  
+    .container {
+      grid-template-columns: 2fr 1fr; /* Sidebar moves to the right */
+      grid-template-rows: none;
+    }
+  }
+  
+  /* Desktop (900px+) */
+  @media (min-width: 900px) {
+    .container {
+      grid-template-columns: 3fr 1fr; /* Wider main content */
+    }
+  
+    .navbar a {
+      padding: 1rem 2rem; /* Larger click targets */
+    }
+  }
